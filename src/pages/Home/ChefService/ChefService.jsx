@@ -1,5 +1,4 @@
 import './chef-service.css';
-
 const ChefService = () => {
   return (
     <div className="chef-service bg-fixed py-20 my-20">

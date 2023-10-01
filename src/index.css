@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.drawer-side a.active {
+  color: #fff !important;
+}
+.drawer-side a {
+  background-color: transparent !important;
+}
