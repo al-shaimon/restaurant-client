@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import useCart from '../../../hooks/useCart';
 import { FaTrashAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
+import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 
 const MyCart = () => {
   const [cart, refetch] = useCart();
@@ -34,52 +35,59 @@ const MyCart = () => {
   };
 
   return (
-    <div className="w-full font-cinzel">
+    <div className="w-full font-cinzel px-2">
       <Helmet>
         <title>Bistro Boss | My Cart</title>
       </Helmet>
-      <div className="text-xl uppercase font-bold flex justify-evenly items-center px-4 h-20">
-        <h3>Total Items: {cart.length}</h3>
-        <h3>Total Price: ${total}</h3>
-        <button className="btn bg-[#D1A054] btn-sm text-white">PAY</button>
-      </div>
-      <div className="overflow-x-auto">
-        <table className="table">
-          {/* head */}
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Food</th>
-              <th>Item Name</th>
-              <th>Price</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {cart.map((item, index) => (
-              <tr key={item._id}>
-                <td>{index + 1}</td>
-                <td>
-                  <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12">
-                      <img src={item.image} alt="Avatar Tailwind CSS Component" />
-                    </div>
-                  </div>
-                </td>
-                <td>{item.name}</td>
-                <td className="text-end">${item.price}</td>
-                <td>
-                  <button
-                    onClick={() => handleDelete(item)}
-                    className="btn bg-[#B91C1C] text-white"
-                  >
-                    <FaTrashAlt></FaTrashAlt>
-                  </button>
-                </td>
+      <SectionTitle
+        className="font-medium"
+        heading="WANNA ADD MORE?"
+        subHeading="---My Cart---"
+      ></SectionTitle>
+      <div className='bg-white'>
+        <div className="text-xl uppercase font-bold flex justify-evenly items-center px-4 h-20">
+          <h3>Total Items: {cart.length}</h3>
+          <h3>Total Price: ${total}</h3>
+          <button className="btn bg-[#D1A054] btn-sm text-white">PAY</button>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="table">
+            {/* head */}
+            <thead className="bg-[#D1A054] rounded-t-xl">
+              <tr>
+                <th>#</th>
+                <th>Food</th>
+                <th>Item Name</th>
+                <th>Price</th>
+                <th>Action</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {cart.map((item, index) => (
+                <tr key={item._id}>
+                  <td>{index + 1}</td>
+                  <td>
+                    <div className="avatar">
+                      <div className="mask mask-squircle w-12 h-12">
+                        <img src={item.image} alt="Avatar Tailwind CSS Component" />
+                      </div>
+                    </div>
+                  </td>
+                  <td>{item.name}</td>
+                  <td className="text-end">${item.price}</td>
+                  <td>
+                    <button
+                      onClick={() => handleDelete(item)}
+                      className="btn bg-[#B91C1C] text-white"
+                    >
+                      <FaTrashAlt></FaTrashAlt>
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
