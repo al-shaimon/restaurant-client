@@ -42,7 +42,7 @@ const MyCart = () => {
       <SectionTitle
         className="font-medium"
         heading="WANNA ADD MORE?"
-        subHeading="---My Cart---"
+        subHeading="My Cart"
       ></SectionTitle>
       <div className='bg-white'>
         <div className="text-xl uppercase font-bold flex justify-evenly items-center px-4 h-20">

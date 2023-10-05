@@ -7,7 +7,7 @@ import slide4 from '../../../assets/home/slide4.jpg';
 const ChefRecommend = () => {
   return (
     <section>
-      <SectionTitle heading="CHEF RECOMMENDS" subHeading="---Should Try---"></SectionTitle>
+      <SectionTitle heading="CHEF RECOMMENDS" subHeading="Should Try"></SectionTitle>
       <div className="sm:flex flex-row">
         <div className="md:w-1/4 mr-4 mt-6">
           <div>

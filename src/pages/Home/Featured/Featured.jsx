@@ -8,7 +8,7 @@ const Featured = () => {
       <SectionTitle
         className="bg-slate-900 bg-opacity-60 py-1"
         heading="FEATURED ITEM"
-        subHeading="---Check it out---"
+        subHeading="Check it out"
       ></SectionTitle>
       <div className="md:flex justify-center items-center bg-slate-900 bg-opacity-60 pb-20 pt-12 px-36">
         <div>

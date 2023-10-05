@@ -11,9 +11,9 @@ import {
   FaShoppingBag,
   FaShoppingCart,
   FaUsers,
-  FaUtensils,
   FaWallet,
 } from 'react-icons/fa';
+import { ImSpoonKnife } from 'react-icons/im';
 import useCart from '../hooks/useCart';
 import useAdmin from '../hooks/useAdmin';
 
@@ -25,7 +25,7 @@ const Dashboard = () => {
   const [isAdmin] = useAdmin();
 
   return (
-    <div className="drawer lg:drawer-open">
+    <div className="drawer lg:drawer-open font-inter">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col items-center justify-center">
         {/* Page content here */}
@@ -53,13 +53,13 @@ const Dashboard = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/reservation">
-                  <FaUtensils className="text-2xl"></FaUtensils>
+                <NavLink to="/dashboard/addItem">
+                  <ImSpoonKnife className="text-2xl"></ImSpoonKnife>
                   Add Items
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/history">
+                <NavLink to="/dashboard/manageitems">
                   <FaListUl className="text-2xl"></FaListUl>
                   Manage Items
                 </NavLink>
