@@ -3,6 +3,7 @@ import useCart from '../../../hooks/useCart';
 import { FaTrashAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import SectionTitle from '../../../components/SectionTitle/SectionTitle';
+import { Link } from 'react-router-dom';
 
 const MyCart = () => {
   const [cart, refetch] = useCart();
@@ -44,11 +45,13 @@ const MyCart = () => {
         heading="WANNA ADD MORE?"
         subHeading="My Cart"
       ></SectionTitle>
-      <div className='bg-white'>
+      <div className="bg-white">
         <div className="text-xl uppercase font-bold flex justify-evenly items-center px-4 h-20">
           <h3>Total Items: {cart.length}</h3>
           <h3>Total Price: ${total}</h3>
-          <button className="btn bg-[#D1A054] btn-sm text-white">PAY</button>
+          <Link to="/dashboard/payment">
+            <button className="btn bg-[#D1A054] btn-sm text-white">PAY</button>
+          </Link>
         </div>
         <div className="overflow-x-auto">
           <table className="table">
