@@ -27,7 +27,7 @@ const Dashboard = () => {
   return (
     <div className="drawer lg:drawer-open font-inter">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col items-center justify-center">
+      <div className="drawer-content">
         {/* Page content here */}
         <Outlet></Outlet>
         <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">
@@ -47,7 +47,7 @@ const Dashboard = () => {
           {isAdmin ? (
             <>
               <li>
-                <NavLink to="/dashboard/home">
+                <NavLink to="/dashboard/adminhome">
                   <FaHome className="text-2xl"></FaHome>
                   Admin Home
                 </NavLink>
@@ -80,7 +80,7 @@ const Dashboard = () => {
           ) : (
             <>
               <li>
-                <NavLink to="/dashboard/home">
+                <NavLink to="/dashboard/userhome">
                   <FaHome className="text-2xl"></FaHome>
                   User Home
                 </NavLink>
