@@ -16,6 +16,8 @@ import ManageItems from '../pages/Dashboard/ManageItems/ManageItems';
 import Payment from '../pages/Dashboard/Payment/Payment';
 import UserHome from '../pages/Dashboard/UserHome/UserHome';
 import AdminHome from '../pages/Dashboard/AdminHome/AdminHome';
+import ContactUs from '../pages/ContactUs/ContactUs';
+import Message from '../pages/Dashboard/Message/Message';
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +35,10 @@ export const router = createBrowserRouter([
       {
         path: 'order/:category',
         element: <Order></Order>,
+      },
+      {
+        path: 'contact-us',
+        element: <ContactUs></ContactUs>,
       },
       {
         path: 'login',
@@ -102,6 +108,14 @@ export const router = createBrowserRouter([
         element: (
           <AdminRoute>
             <ManageItems></ManageItems>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: 'contact',
+        element: (
+          <AdminRoute>
+            <Message></Message>
           </AdminRoute>
         ),
       },

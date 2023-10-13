@@ -16,6 +16,7 @@ import {
 import { ImSpoonKnife } from 'react-icons/im';
 import useCart from '../hooks/useCart';
 import useAdmin from '../hooks/useAdmin';
+import { FaMessage } from 'react-icons/fa6';
 
 const Dashboard = () => {
   const [cart] = useCart();
@@ -74,6 +75,12 @@ const Dashboard = () => {
                 <NavLink to="/dashboard/allusers">
                   <FaUsers className="text-2xl"></FaUsers>
                   All Users
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/dashboard/contact">
+                  <FaMessage className="text-2xl"></FaMessage>
+                  Messages
                 </NavLink>
               </li>
             </>
@@ -140,7 +147,7 @@ const Dashboard = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact">
+            <NavLink to="/contact-us">
               <FaEnvelope className="text-2xl"></FaEnvelope>
               Contact
             </NavLink>

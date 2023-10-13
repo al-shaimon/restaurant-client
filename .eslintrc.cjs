@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true, node: true },
+  env: { browser: true, es2020: true, node: true }, //Use node: true for avoiding some eslintrc errors such as require not define in tailwind.config.js
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',

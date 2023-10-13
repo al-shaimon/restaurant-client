@@ -10,3 +10,13 @@
 .drawer-side a {
   background-color: transparent !important;
 }
+
+#nav-bar a.active {
+  color: #eeff25!important;
+  background: none;
+}
+
+#nav-bar :hover a{
+  background: none;
+  color: #fff;
+}
