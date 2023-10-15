@@ -103,8 +103,10 @@ const NavBar = () => {
             </ul>
           </div>
           <NavLink to="/" className="font-cinzel">
-            <h2 className="font-black text-sm md:text-2xl text-white">Bistro Boss</h2>
-            <p className="md:tracking-[0.35rem] tracking-widest text-xs md:text-lg leading-none font-bold pt-0 text-white">
+            <h2 className="flex gap-1 font-black text-sm md:text-2xl text-white">
+              Bistro <span>Boss</span>
+            </h2>
+            <p className="md:tracking-[0.29rem] tracking-[0.12rem] text-xs md:text-lg leading-none font-bold pt-0 text-white">
               Restaurant
             </p>
           </NavLink>

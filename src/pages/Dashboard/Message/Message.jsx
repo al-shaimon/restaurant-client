@@ -65,7 +65,11 @@ const Message = () => {
 
   return (
     <div className="w-full mx-5">
-      <SectionTitle heading="All Messages" subHeading="Contact"></SectionTitle>
+      <SectionTitle
+        className="text-black"
+        heading="All Messages"
+        subHeading="Contact"
+      ></SectionTitle>
       {sortedMessages.map((message, index) => (
         <div key={index}>
           {message?.status === 'not read' ? (

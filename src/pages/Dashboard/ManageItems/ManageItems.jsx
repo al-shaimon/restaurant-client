@@ -30,7 +30,11 @@ const ManageItems = () => {
   };
   return (
     <div className="w-full">
-      <SectionTitle subHeading="Hurry Up!" heading="MANAGE ALL ITEMS"></SectionTitle>
+      <SectionTitle
+        className="text-black"
+        subHeading="Hurry Up!"
+        heading="MANAGE ALL ITEMS"
+      ></SectionTitle>
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}

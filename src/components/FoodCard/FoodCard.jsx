@@ -52,7 +52,7 @@ const FoodCard = ({ item }) => {
   };
 
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="card text-black bg-zinc-100 shadow-xl mb-5 px-2">
       <figure>
         <img className="w-full" src={image} alt={name} />
       </figure>
@@ -68,7 +68,7 @@ const FoodCard = ({ item }) => {
         <div className="card-actions justify-end">
           <button
             onClick={() => handleAddToCart(item)}
-            className="btn btn-outline bg-[#E8E8E8] hover:text-[#BB8506] border-0 border-b-2 mt-2 mx-auto text-[#BB8506]"
+            className="btn btn-outline bg-[#E8E8E8] hover:text-[#BB8506] hover:bg-black border-0 border-b-2 mt-2 mx-auto text-[#BB8506]"
           >
             Add to Cart
           </button>

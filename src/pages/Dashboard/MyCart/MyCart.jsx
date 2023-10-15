@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const MyCart = () => {
   const [cart, refetch] = useCart();
   console.log(cart);
-  const total = cart.reduce((sum, item) => item.price + sum, 0);
+  const total = cart.reduce((sum, item) => item.price + sum, 0).toFixed(2);
 
   const handleDelete = (item) => {
     Swal.fire({
@@ -41,7 +41,7 @@ const MyCart = () => {
         <title>Bistro Boss | My Cart</title>
       </Helmet>
       <SectionTitle
-        className="font-medium"
+        className="font-medium text-black"
         heading="WANNA ADD MORE?"
         subHeading="My Cart"
       ></SectionTitle>
@@ -56,7 +56,7 @@ const MyCart = () => {
         <div className="overflow-x-auto">
           <table className="table">
             {/* head */}
-            <thead className="bg-[#D1A054] rounded-t-xl">
+            <thead className="bg-[#D1A054] text-white rounded-t-xl">
               <tr>
                 <th>#</th>
                 <th>Food</th>

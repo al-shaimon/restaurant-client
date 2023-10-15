@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -15,38 +15,53 @@ const Category = () => {
   return (
     <section>
       <SectionTitle
+        className="text-black"
         heading={'ORDER ONLINE'}
         subHeading={'From 11:00am to 10:00pm'}
       ></SectionTitle>
       <Swiper
-        slidesPerView={4}
+        slidesPerView={2}
         spaceBetween={30}
         centeredSlides={true}
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
-        className="mySwiper mb-24"
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay, Pagination]}
+        className="mySwiper"
       >
         <SwiperSlide>
-          <img src={slide1} alt="" />
-          <h3 className="text-4xl uppercase text-center text-white -mt-16 ">Salads</h3>
+          <img className="md:w-full md:h-[30rem]" src={slide1} alt="" />
+          <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16 ">
+            Salads
+          </h3>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide2} alt="" />
-          <h3 className="text-4xl uppercase text-center text-white -mt-16">Pizzas</h3>
+          <img className="md:w-full md:h-[30rem]" src={slide2} alt="" />
+          <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16">
+            Pizzas
+          </h3>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide3} alt="" />
-          <h3 className="text-4xl uppercase text-center text-white -mt-16">Soups</h3>
+          <img className="md:w-full md:h-[30rem]" src={slide3} alt="" />
+          <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16">
+            Soups
+          </h3>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide4} alt="" />
-          <h3 className="text-4xl uppercase text-center text-white -mt-16">Desserts</h3>
+          <img className="md:w-full md:h-[30rem]" src={slide4} alt="" />
+          <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16">
+            Desserts
+          </h3>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide5} alt="" />
-          <h3 className="text-4xl uppercase text-center text-white -mt-16">Salads</h3>
+          <img className="md:w-full md:h-[30rem]" src={slide5} alt="" />
+          <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16">
+            Salads
+          </h3>
         </SwiperSlide>
       </Swiper>
     </section>

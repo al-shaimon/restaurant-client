@@ -18,6 +18,12 @@ import UserHome from '../pages/Dashboard/UserHome/UserHome';
 import AdminHome from '../pages/Dashboard/AdminHome/AdminHome';
 import ContactUs from '../pages/ContactUs/ContactUs';
 import Message from '../pages/Dashboard/Message/Message';
+import Reservation from '../pages/Dashboard/Reservation/Reservation';
+import PaymentHistory from '../pages/Dashboard/PaymentHistory/PaymentHistory';
+import MyBooking from '../pages/Dashboard/MyBooking/MyBooking';
+import AddReview from '../pages/Dashboard/AddReview/AddReview';
+import ManageBookings from '../pages/Dashboard/ManageBookings/ManageBookings';
+import PageNotFound from '../pages/404Page/PageNotFound';
 
 export const router = createBrowserRouter([
   {
@@ -56,6 +62,10 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path: '*',
+        element: <PageNotFound></PageNotFound>,
+      },
     ],
   },
   {
@@ -77,6 +87,22 @@ export const router = createBrowserRouter([
       {
         path: 'payment',
         element: <Payment></Payment>,
+      },
+      {
+        path: 'reservation',
+        element: <Reservation></Reservation>,
+      },
+      {
+        path: 'history',
+        element: <PaymentHistory></PaymentHistory>,
+      },
+      {
+        path: 'review',
+        element: <AddReview></AddReview>,
+      },
+      {
+        path: 'booking',
+        element: <MyBooking></MyBooking>,
       },
       // Admin Routes
       {
@@ -112,12 +138,24 @@ export const router = createBrowserRouter([
         ),
       },
       {
+        path: 'manageBookings',
+        element: (
+          <AdminRoute>
+            <ManageBookings></ManageBookings>
+          </AdminRoute>
+        ),
+      },
+      {
         path: 'contact',
         element: (
           <AdminRoute>
             <Message></Message>
           </AdminRoute>
         ),
+      },
+      {
+        path: '*',
+        element: <PageNotFound></PageNotFound>,
       },
     ],
   },

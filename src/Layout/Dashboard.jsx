@@ -26,7 +26,7 @@ const Dashboard = () => {
   const [isAdmin] = useAdmin();
 
   return (
-    <div className="drawer lg:drawer-open font-inter">
+    <div className="drawer lg:drawer-open font-inter text-black">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
         {/* Page content here */}
@@ -35,16 +35,20 @@ const Dashboard = () => {
           Open drawer
         </label>
       </div>
-      <div className="drawer-side ">
+      <div className="drawer-side">
         <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-        <ul className="menu p-4 w-80 min-h-full text-base-content font-cinzel font-bold uppercase bg-[#D1A054]">
+        <ul className="menu p-4 w-80 min-h-full font-cinzel font-bold uppercase bg-[#D1A054] text-black">
           {/* Sidebar content here */}
 
           {/* title section */}
-          <li className="mb-14">
-            <h2 className="font-black text-2xl">Bistro Boss</h2>
-            <p className="tracking-[0.35rem] text-lg leading-none font-bold pt-0">Restaurant</p>
-          </li>
+          <div className="mb-10 ml-4">
+            <h2 className="flex flex-col items-start font-black text-2xl">
+              Bistro Boss{' '}
+              <span className="tracking-[0.35rem] text-lg leading-none font-bold pt-0">
+                Restaurant
+              </span>
+            </h2>
+          </div>
           {isAdmin ? (
             <>
               <li>
@@ -66,7 +70,7 @@ const Dashboard = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink className="flex" to="/dashboard/mycart">
+                <NavLink className="flex" to="/dashboard/manageBookings">
                   <FaBook className="text-2xl"></FaBook>
                   Manage Bookings
                 </NavLink>

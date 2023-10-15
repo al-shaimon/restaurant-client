@@ -21,11 +21,15 @@ const Testimonials = () => {
 
   return (
     <section className="my-20">
-      <SectionTitle subHeading="What Our Clients Say" heading="TESTIMONIALS"></SectionTitle>
+      <SectionTitle
+        className="text-black"
+        subHeading="What Our Clients Say"
+        heading="TESTIMONIALS"
+      ></SectionTitle>
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         {reviews.map((review) => (
           <SwiperSlide key={review._id}>
-            <div className="flex flex-col items-center justify-center my-4 mx-24">
+            <div className="flex flex-col items-center justify-center my-4 mx-10 md:mx-24">
               <Rating style={{ maxWidth: 180 }} value={review.rating} readOnly />
               <p className="text-6xl pt-6">
                 <FaQuoteLeft></FaQuoteLeft>

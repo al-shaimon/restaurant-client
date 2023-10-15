@@ -44,16 +44,20 @@ const ContactUs = () => {
         <title>Bistro Boss | Contact Us</title>
       </Helmet>
       <Cover img={contactImg} title="Contact Us" subTitle="Would you like to try a dish?"></Cover>
-      <SectionTitle heading="Our Location" subHeading="Visit Us"></SectionTitle>
+      <SectionTitle
+        className="text-black"
+        heading="Our Location"
+        subHeading="Visit Us"
+      ></SectionTitle>
       {/* Info Section */}
-      <section className="md:grid grid-cols-3">
+      <section className="md:grid grid-cols-3 text-[#444]">
         {/* Phone */}
         <div className="h-72 mb-8 mx-2 border shadow-md">
           <div className="flex items-center justify-center text-white text-center bg-[#D1A054]  h-20">
             <FaPhoneVolume></FaPhoneVolume>
           </div>
-          <div className="text-center bg-slate-200 mx-4 h-2/3">
-            <h2 className="text-2xl font-medium pt-10">PHONE</h2>
+          <div className="text-center bg-slate-200 mx-4 h-2/3 ">
+            <h2 className="text-2xl font-medium pt-10 text-black text-black">PHONE</h2>
             <p className="pt-2 text-sm">+38 (012) 34 56 789</p>
           </div>
         </div>
@@ -64,7 +68,7 @@ const ContactUs = () => {
             <FaLocationDot></FaLocationDot>
           </div>
           <div className="text-center bg-slate-200 mx-4 h-2/3">
-            <h2 className="text-2xl font-medium pt-10">ADDRESS</h2>
+            <h2 className="text-2xl font-medium pt-10 text-black">ADDRESS</h2>
             <p className="pt-2 text-sm">8825 Astoria, Queens, NY 11369</p>
           </div>
         </div>
@@ -75,7 +79,7 @@ const ContactUs = () => {
             <FaClock></FaClock>
           </div>
           <div className="text-center bg-slate-200 mx-4 h-2/3">
-            <h2 className="text-2xl font-medium pt-10">WORKING HOURS</h2>
+            <h2 className="text-2xl font-medium pt-10 text-black">WORKING HOURS</h2>
             <p className="pt-2 text-sm">
               Mon - Fri: 08:00 - 22:00 <br />
               Sat - Sun: 10:00 - 23:00
@@ -83,35 +87,39 @@ const ContactUs = () => {
           </div>
         </div>
       </section>
-      <SectionTitle heading="Contact Form" subHeading="Send Us a Message"></SectionTitle>
+      <SectionTitle
+        className="text-black"
+        heading="Contact Form"
+        subHeading="Send Us a Message"
+      ></SectionTitle>
       {/* Contact Form */}
       <section className="bg-slate-200 max-w-screen-xl">
-        <form onSubmit={handleSubmit(onsubmit)} className="card-body">
+        <form onSubmit={handleSubmit(onsubmit)} className="card-body ">
           <div className="grid grid-cols-2 gap-4">
             <div className="form-control mt-0 pt-0">
               <label className="label">
-                <span className="label-text font-semibold">Name*</span>
+                <span className="label-text font-semibold text-[#444]">Name*</span>
               </label>
               <input
                 type="text"
                 {...register('name', { required: true })}
                 name="name"
                 placeholder="Enter your name"
-                className="input input-bordered"
+                className="input input-bordered bg-white"
               />
               {errors.name && <span className="text-red-600">Name is required</span>}
             </div>
 
             <div className="form-control mt-0 pt-0">
               <label className="label">
-                <span className="label-text font-semibold">Email*</span>
+                <span className="label-text font-semibold text-[#444]">Email*</span>
               </label>
               <input
                 type="email"
                 {...register('email', { required: true })}
                 name="email"
                 placeholder="Enter your email"
-                className="input input-bordered"
+                className="input input-bordered bg-white"
               />
               {errors.name && <span className="text-red-600">Name is required</span>}
             </div>
@@ -119,24 +127,24 @@ const ContactUs = () => {
 
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold">Phone*</span>
+              <span className="label-text font-semibold text-[#444]">Phone*</span>
             </label>
             <input
               type="number"
               {...register('phone', { required: true })}
               name="phone"
               placeholder="Enter your phone number"
-              className="input input-bordered w-full"
+              className="input input-bordered bg-white w-full"
             />
             {errors.name && <span className="text-red-600">Phone number is required</span>}
           </div>
 
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold">Message*</span>
+              <span className="label-text font-semibold text-[#444]">Message*</span>
             </label>
             <textarea
-              className="textarea textarea-bordered h-24"
+              className="textarea textarea-bordered h-24 bg-white"
               {...register('message', { required: true })}
               name="message"
               placeholder="Write your message here"

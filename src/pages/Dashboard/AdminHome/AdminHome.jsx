@@ -1,6 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import useAuth from '../../../hooks/useAuth';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
+import { FaTruck, FaUsers, FaWallet } from 'react-icons/fa';
+import { LuChefHat } from 'react-icons/lu';
 import {
   BarChart,
   Bar,
@@ -73,106 +75,76 @@ const AdminHome = () => {
   };
 
   return (
-    <div className="w-full m-4">
+    <div className="m-4">
       <h2 className="text-3xl">Hi, {user.displayName}</h2>
       {/* stats */}
-      <div className="stats shadow">
-        <div className="stat">
-          <div className="stat-figure text-secondary">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              className="inline-block w-8 h-8 stroke-current"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              ></path>
-            </svg>
+      <div className="text-white grid grid-cols-1 md:grid-cols-4">
+        {/* Revenue */}
+        <div
+          className="bg-gradient-to-r from-fuchsia-500 to-fuchsia-100
+ flex items-center justify-center border rounded-lg w-full md:w-auto h-36 my-2 md:mr-2"
+        >
+          <div className="text-2xl pr-4">
+            <FaWallet></FaWallet>
           </div>
-          <div className="stat-title">Revenue</div>
-          <div className="stat-value">${stats.revenue}</div>
-          <div className="stat-desc">Jan 1st - Feb 1st</div>
+          <div className="flex flex-col">
+            <div className="text-3xl leading-10 font-extrabold">${stats.revenue}</div>
+            <div className="text-lg">Revenue</div>
+          </div>
         </div>
-
-        <div className="stat">
-          <div className="stat-figure text-secondary">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              className="inline-block w-8 h-8 stroke-current"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-              ></path>
-            </svg>
+        {/* Customers */}
+        <div
+          className="bg-gradient-to-r from-orange-400 to-amber-100
+ flex items-center justify-center border rounded-lg w-full md:w-auto h-36 my-2 md:mr-2"
+        >
+          <div className="text-2xl pr-4">
+            <FaUsers></FaUsers>
           </div>
-          <div className="stat-title">Customers</div>
-          <div className="stat-value">{stats.users}</div>
-          <div className="stat-desc">↗︎ 400 (22%)</div>
+          <div className="flex flex-col">
+            <div className="text-3xl leading-10 font-extrabold">{stats.users}</div>
+            <div className="text-lg">Customers</div>
+          </div>
         </div>
-
-        <div className="stat">
-          <div className="stat-figure text-secondary">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              className="inline-block w-8 h-8 stroke-current"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-              ></path>
-            </svg>
+        {/* Menu Items */}
+        <div
+          className="bg-gradient-to-r from-pink-500 to-pink-200
+ flex items-center justify-center border rounded-lg w-full md:w-auto h-36 my-2 md:mr-2"
+        >
+          <div className="text-2xl pr-4">
+            <LuChefHat></LuChefHat>
           </div>
-          <div className="stat-title">Menu Items</div>
-          <div className="stat-value">{stats.products}</div>
-          <div className="stat-desc">↗︎ 400 (22%)</div>
+          <div className="flex flex-col">
+            <div className="text-3xl leading-10 font-extrabold">{stats.products}</div>
+            <div className="text-lg">Menu Items</div>
+          </div>
         </div>
-
-        <div className="stat">
-          <div className="stat-figure text-secondary">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              className="inline-block w-8 h-8 stroke-current"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
-              ></path>
-            </svg>
+        {/* Orders */}
+        <div
+          className="bg-gradient-to-r from-blue-400 to-sky-200
+ flex items-center justify-center border rounded-lg w-full md:w-auto h-36 my-2"
+        >
+          <div className="text-2xl pr-4">
+            <FaTruck></FaTruck>
           </div>
-          <div className="stat-title">Orders</div>
-          <div className="stat-value">{stats.orders}</div>
-          <div className="stat-desc">↘︎ 90 (14%)</div>
+          <div className="flex flex-col">
+            <div className="text-3xl leading-10 font-extrabold">{stats.orders}</div>
+            <div className="text-lg">Orders</div>
+          </div>
         </div>
       </div>
 
       {/* graph */}
-      <div className="flex">
+      <div className="grid grid-cols-1 md:flex">
         <div className="w-1/2">
+          {/* <ResponsiveContainer width="100%" height="100%"> */}
           <BarChart
             width={500}
             height={300}
             data={chartData}
             margin={{
               top: 20,
-              right: 30,
-              left: 20,
+              right: 100,
+              left: 0,
               bottom: 5,
             }}
           >
@@ -185,7 +157,10 @@ const AdminHome = () => {
               ))}
             </Bar>
           </BarChart>
+          {/* </ResponsiveContainer> */}
         </div>
+
+        {/* Pie Chart */}
         <div className="w-1/2">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart width={400} height={400}>

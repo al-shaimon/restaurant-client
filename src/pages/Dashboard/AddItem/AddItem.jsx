@@ -45,7 +45,11 @@ const AddItem = () => {
   };
   return (
     <div className="w-full md:px-10">
-      <SectionTitle subHeading="What's new?" heading="ADD AN ITEM"></SectionTitle>
+      <SectionTitle
+        className="text-black"
+        subHeading="What's new?"
+        heading="ADD AN ITEM"
+      ></SectionTitle>
       <form onSubmit={handleSubmit(onSubmit)} className="px-5">
         <div className="form-control w-full ">
           <label className="label">
