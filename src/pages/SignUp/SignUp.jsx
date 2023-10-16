@@ -27,7 +27,7 @@ const SignUp = () => {
         .then(() => {
           const saveUser = { name: data.name, email: data.email };
           console.log('save user', saveUser);
-          fetch('https://restaurant-server-seven.vercel.app/users', {
+          fetch('https://restaurant-server-production-75a3.up.railway.app/users', {
             method: 'POST',
             headers: {
               'content-type': 'application/json',

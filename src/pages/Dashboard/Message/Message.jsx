@@ -24,7 +24,7 @@ const Message = () => {
       confirmButtonText: 'Yes, delete it!',
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://restaurant-server-seven.vercel.app/contact/${message._id}`, {
+        fetch(`https://restaurant-server-production-75a3.up.railway.app/contact/${message._id}`, {
           method: 'DELETE',
         })
           .then((res) => res.json())
@@ -39,7 +39,7 @@ const Message = () => {
   };
 
   const handleStatusChange = (message) => {
-    fetch(`https://restaurant-server-seven.vercel.app/contact/${message._id}`, {
+    fetch(`https://restaurant-server-production-75a3.up.railway.app/contact/${message._id}`, {
       method: 'PATCH',
     })
       .then((res) => res.json())

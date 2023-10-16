@@ -7,7 +7,7 @@ const useMenu = () => {
   // const [menu, setMenu] = useState([]);
   // const [loading, setLoading] = useState(true);
   // useEffect(() => {
-  //   fetch('https://restaurant-server-seven.vercel.app/menu')
+  //   fetch('https://restaurant-server-production-75a3.up.railway.app/menu')
   //     .then((res) => res.json())
   //     .then((data) => {
   //       setMenu(data);
@@ -24,7 +24,7 @@ const useMenu = () => {
   } = useQuery({
     queryKey: ['menu'],
     queryFn: async () => {
-      const res = await fetch('https://restaurant-server-seven.vercel.app/menu');
+      const res = await fetch('https://restaurant-server-production-75a3.up.railway.app/menu');
       return res.json();
     },
   });

@@ -57,7 +57,9 @@ const AuthProvider = ({ children }) => {
       // get and set jwt token
       if (currentUser) {
         axios
-          .post('https://restaurant-server-seven.vercel.app/jwt', { email: currentUser.email })
+          .post('https://restaurant-server-production-75a3.up.railway.app/jwt', {
+            email: currentUser.email,
+          })
           .then((data) => {
             localStorage.setItem('access-token', data.data.token);
             setLoading(false);

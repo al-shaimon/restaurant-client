@@ -31,13 +31,31 @@ const Dashboard = () => {
       <div className="drawer-content">
         {/* Page content here */}
         <Outlet></Outlet>
-        <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">
+        {/* <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">
           Open drawer
+        </label> */}
+        <label
+          htmlFor="my-drawer-2"
+          className="btn btn-square btn-ghost lg:hidden fixed top-0 left-0"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            className="inline-block w-5 h-5 stroke-current"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
         </label>
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-        <ul className="menu p-4 w-80 min-h-full font-cinzel font-bold uppercase bg-[#D1A054] text-black">
+        <ul className="menu p-4 md:w-80 min-h-full font-cinzel font-bold uppercase bg-[#D1A054] text-black">
           {/* Sidebar content here */}
 
           {/* title section */}

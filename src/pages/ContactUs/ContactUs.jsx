@@ -57,7 +57,7 @@ const ContactUs = () => {
             <FaPhoneVolume></FaPhoneVolume>
           </div>
           <div className="text-center bg-slate-200 mx-4 h-2/3 ">
-            <h2 className="text-2xl font-medium pt-10 text-black text-black">PHONE</h2>
+            <h2 className="text-2xl font-medium pt-10 text-black">PHONE</h2>
             <p className="pt-2 text-sm">+38 (012) 34 56 789</p>
           </div>
         </div>

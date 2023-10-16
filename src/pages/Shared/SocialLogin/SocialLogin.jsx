@@ -17,7 +17,7 @@ const SocialLogin = () => {
       const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email };
 
       // saving user data in mongodb
-      fetch('https://restaurant-server-seven.vercel.app/users', {
+      fetch('https://restaurant-server-production-75a3.up.railway.app/users', {
         method: 'POST',
         headers: {
           'content-type': 'application/json',

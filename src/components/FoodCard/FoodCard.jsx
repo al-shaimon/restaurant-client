@@ -15,7 +15,7 @@ const FoodCard = ({ item }) => {
     console.log(item);
     if (user && user.email) {
       const cartItem = { menuItemId: _id, name, image, email: user.email, price };
-      fetch('https://restaurant-server-seven.vercel.app/carts', {
+      fetch('https://restaurant-server-production-75a3.up.railway.app/carts', {
         method: 'POST',
         headers: {
           'content-type': 'application/json',

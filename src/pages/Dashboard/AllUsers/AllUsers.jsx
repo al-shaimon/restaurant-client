@@ -12,7 +12,7 @@ const AllUsers = () => {
   });
 
   const handleMakeAdmin = (user) => {
-    fetch(`https://restaurant-server-seven.vercel.app/users/admin/${user._id}`, {
+    fetch(`https://restaurant-server-production-75a3.up.railway.app/users/admin/${user._id}`, {
       method: 'PATCH',
     })
       .then((res) => res.json())
@@ -42,7 +42,7 @@ const AllUsers = () => {
       confirmButtonText: 'Yes, delete it!',
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://restaurant-server-seven.vercel.app/users/${user._id}`, {
+        fetch(`https://restaurant-server-production-75a3.up.railway.app/users/${user._id}`, {
           method: 'DELETE',
         })
           .then((res) => res.json())

@@ -23,7 +23,7 @@ const useCart = () => {
 export default useCart;
 
 // queryFn: async () => {
-//   const res = await fetch(`https://restaurant-server-seven.vercel.app/carts?email=${user?.email}`, {
+//   const res = await fetch(`https://restaurant-server-production-75a3.up.railway.app/carts?email=${user?.email}`, {
 //     headers: {
 //       authorization: `bearer ${token}`,
 //     },
