@@ -14,56 +14,112 @@ import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 const Category = () => {
   return (
     <section>
-      <SectionTitle
-        className="text-black"
-        heading={'ORDER ONLINE'}
-        subHeading={'From 11:00am to 10:00pm'}
-      ></SectionTitle>
-      <Swiper
-        slidesPerView={2}
-        spaceBetween={30}
-        centeredSlides={true}
-        pagination={{
-          clickable: true,
-        }}
-        autoplay={{
-          delay: 3500,
-          disableOnInteraction: false,
-        }}
-        modules={[Autoplay, Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img className="md:w-full md:h-[30rem]" src={slide1} alt="" />
-          <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16 ">
-            Salads
-          </h3>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="md:w-full md:h-[30rem]" src={slide2} alt="" />
-          <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16">
-            Pizzas
-          </h3>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="md:w-full md:h-[30rem]" src={slide3} alt="" />
-          <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16">
-            Soups
-          </h3>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="md:w-full md:h-[30rem]" src={slide4} alt="" />
-          <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16">
-            Desserts
-          </h3>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="md:w-full md:h-[30rem]" src={slide5} alt="" />
-          <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16">
-            Salads
-          </h3>
-        </SwiperSlide>
-      </Swiper>
+      {/* Small device */}
+      <section className="md:hidden">
+        <SectionTitle
+          className="text-black"
+          heading={'ORDER ONLINE'}
+          subHeading={'From 11:00am to 10:00pm'}
+        ></SectionTitle>
+        <Swiper
+          slidesPerView={2}
+          spaceBetween={30}
+          centeredSlides={true}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay, Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <img className="md:w-full md:h-[30rem]" src={slide1} alt="" />
+            <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16 ">
+              Salads
+            </h3>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="md:w-full md:h-[30rem]" src={slide2} alt="" />
+            <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16">
+              Pizzas
+            </h3>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="md:w-full md:h-[30rem]" src={slide3} alt="" />
+            <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16">
+              Soups
+            </h3>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="md:w-full md:h-[30rem]" src={slide4} alt="" />
+            <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16">
+              Desserts
+            </h3>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="md:w-full md:h-[30rem]" src={slide5} alt="" />
+            <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16">
+              Salads
+            </h3>
+          </SwiperSlide>
+        </Swiper>
+      </section>
+      {/* Medium and large device */}
+      <section className="hidden md:block">
+        <SectionTitle
+          className="text-black"
+          heading={'ORDER ONLINE'}
+          subHeading={'From 11:00am to 10:00pm'}
+        ></SectionTitle>
+        <Swiper
+          slidesPerView={4}
+          spaceBetween={30}
+          centeredSlides={true}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay, Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <img className="md:w-full md:h-[30rem]" src={slide1} alt="" />
+            <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16 ">
+              Salads
+            </h3>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="md:w-full md:h-[30rem]" src={slide2} alt="" />
+            <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16">
+              Pizzas
+            </h3>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="md:w-full md:h-[30rem]" src={slide3} alt="" />
+            <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16">
+              Soups
+            </h3>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="md:w-full md:h-[30rem]" src={slide4} alt="" />
+            <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16">
+              Desserts
+            </h3>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="md:w-full md:h-[30rem]" src={slide5} alt="" />
+            <h3 className="text-xl md:text-4xl font-cinzel uppercase text-center text-white  -mt-16">
+              Salads
+            </h3>
+          </SwiperSlide>
+        </Swiper>
+      </section>
     </section>
   );
 };

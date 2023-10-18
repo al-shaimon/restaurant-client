@@ -83,7 +83,7 @@ const Message = () => {
                 <div>
                   <button
                     onClick={() => handleStatusChange(message)}
-                    className="btn bg-green-500 mx-3"
+                    className="btn bg-green-500 mx-3 text-white"
                   >
                     <FaCheck></FaCheck>
                   </button>

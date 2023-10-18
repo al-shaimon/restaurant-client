@@ -50,7 +50,7 @@ const ContactUs = () => {
         subHeading="Visit Us"
       ></SectionTitle>
       {/* Info Section */}
-      <section className="md:grid grid-cols-3 text-[#444]">
+      <section className="md:grid grid-cols-3 text-[#444] max-w-screen-2xl mx-2 md:mx-16 lg:mx-32">
         {/* Phone */}
         <div className="h-72 mb-8 mx-2 border shadow-md">
           <div className="flex items-center justify-center text-white text-center bg-[#D1A054]  h-20">
@@ -93,9 +93,9 @@ const ContactUs = () => {
         subHeading="Send Us a Message"
       ></SectionTitle>
       {/* Contact Form */}
-      <section className="bg-slate-200 max-w-screen-xl">
+      <section className="bg-slate-200 max-w-screen-2xl mx-2 md:mx-16 lg:mx-32">
         <form onSubmit={handleSubmit(onsubmit)} className="card-body ">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="md:grid grid-cols-2 gap-4">
             <div className="form-control mt-0 pt-0">
               <label className="label">
                 <span className="label-text font-semibold text-[#444]">Name*</span>

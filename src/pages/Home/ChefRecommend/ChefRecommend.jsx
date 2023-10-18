@@ -12,7 +12,7 @@ const ChefRecommend = () => {
         heading="CHEF RECOMMENDS"
         subHeading="Should Try"
       ></SectionTitle>
-      <div className="sm:flex flex-row mx-1 md:mx-0">
+      <div className="sm:flex flex-row mx-1 md:mx-4">
         <div className="md:w-1/4 md:mr-4 mt-6">
           <div>
             <img className="h-72 w-screen" src={slide1} alt="salad" />

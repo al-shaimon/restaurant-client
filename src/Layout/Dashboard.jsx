@@ -26,7 +26,7 @@ const Dashboard = () => {
   const [isAdmin] = useAdmin();
 
   return (
-    <div className="drawer lg:drawer-open font-inter text-black">
+    <div className="drawer lg:drawer-open font-inter text-black -mt-4">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
         {/* Page content here */}
