@@ -3,9 +3,9 @@ const Footer = () => {
   return (
     <footer>
       <div className="grid grid-cols-2 bg-neutral text-center text-white mx-auto mt-5">
-        <div className="bg-[#1F2937] py-10">
-          <h3 className="text-xl font-semibold">CONTACT US</h3>
-          <p className="mt-3">
+        <div className="bg-[#1F2937] pt-5 pb-2">
+          <h3 className="text-lg font-semibold">CONTACT US</h3>
+          <p className="mt-3 text-sm">
             123 ABS Street, Uni 21, Bangladesh
             <br />
             +88 123456789
@@ -15,9 +15,9 @@ const Footer = () => {
             Sat - Sun: 10:00 - 23:00
           </p>
         </div>
-        <div className="bg-[#111827] py-10">
-          <h3 className="text-2xl">Follow US</h3>
-          <p className="mt-3">Join us on social media</p>
+        <div className="bg-[#111827] pt-5 pb-2">
+          <h3 className="text-lg">Follow US</h3>
+          <p className="mt-3 text-sm">Join us on social media</p>
           <div className="flex items-center justify-center gap-4 mt-2">
             <a>
               <svg
@@ -55,7 +55,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="footer footer-center p-4 bg-black text-white text-base">
+      <div className="footer footer-center p-2 bg-black text-white text-sm">
         <aside>
           <p>Copyright © {currentYear} - All right reserved by ACME Industries Ltd</p>
         </aside>

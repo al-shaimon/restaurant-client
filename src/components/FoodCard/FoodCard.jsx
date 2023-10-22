@@ -52,7 +52,7 @@ const FoodCard = ({ item }) => {
   };
 
   return (
-    <div className="card text-black bg-zinc-100 shadow-xl mb-5 px-2">
+    <div className="card text-black bg-zinc-100 shadow-xl mb-5 mx-2">
       <figure>
         <img className="w-full" src={image} alt={name} />
       </figure>

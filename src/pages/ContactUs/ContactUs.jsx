@@ -4,8 +4,10 @@ import contactImg from '../../assets/contact/banner.jpg';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import { FaClock, FaLocationDot, FaPhoneVolume } from 'react-icons/fa6';
 import { useForm } from 'react-hook-form';
+import ReCAPTCHA from 'react-google-recaptcha';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 import Swal from 'sweetalert2';
+import { useState } from 'react';
 
 const ContactUs = () => {
   const [axiosSecure] = useAxiosSecure();
@@ -16,6 +18,8 @@ const ContactUs = () => {
     reset,
     formState: { errors },
   } = useForm();
+
+  const [capVal, setCapVal] = useState(null);
 
   const onsubmit = (data) => {
     // const formData = JSON.stringify(data);
@@ -150,9 +154,13 @@ const ContactUs = () => {
               placeholder="Write your message here"
             ></textarea>
           </div>
-          {/* TODO: Google reCAPTCHA Implementation*/}
+          <ReCAPTCHA
+            sitekey={import.meta.env.VITE_reCAPTCHA_Site_Key}
+            onChange={(val) => setCapVal(val)}
+          />
           <label className="inline-flex items-center justify-center">
             <input
+              disabled={!capVal}
               type="submit"
               value="Send Message"
               className="text-white btn bg-gradient-to-r from-[#835D23] to-[#B58130] text-center w-1/2"

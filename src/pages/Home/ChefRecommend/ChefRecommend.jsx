@@ -12,10 +12,10 @@ const ChefRecommend = () => {
         heading="CHEF RECOMMENDS"
         subHeading="Should Try"
       ></SectionTitle>
-      <div className="sm:flex flex-row mx-1 md:mx-4">
+      <div className="sm:flex flex-row mx-1">
         <div className="md:w-1/4 md:mr-4 mt-6">
           <div>
-            <img className="h-72 w-screen" src={slide1} alt="salad" />
+            <img className="h-screen md:h-72 w-screen" src={slide1} alt="salad" />
           </div>
           <div className="bg-[#F3F3F3] py-5 text-center">
             <h3 className="text-xl font-bold text-black">Caeser Salad</h3>

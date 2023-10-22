@@ -15,13 +15,17 @@ const Home = () => {
         <title>Bistro Boss | Home</title>
       </Helmet>
       <Banner />
-      <Category />
-      <ChefService />
-      <PopularMenu />
-      <CallUs />
-      <ChefRecommend />
+      <div className="max-w-screen-xl mx-auto">
+        <Category />
+        <ChefService />
+        <PopularMenu />
+        <CallUs />
+        <ChefRecommend />
+      </div>
       <Featured />
-      <Testimonials />
+      <div className="max-w-screen-xl mx-auto" d>
+        <Testimonials />
+      </div>
     </div>
   );
 };

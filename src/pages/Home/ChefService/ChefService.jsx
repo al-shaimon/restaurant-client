@@ -1,7 +1,7 @@
 import './chef-service.css';
 const ChefService = () => {
   return (
-    <div className="chef-service bg-fixed py-20 my-20 text-black">
+    <div className="chef-service bg-fixed py-20 my-20 text-black rounded">
       <div className="flex flex-col justify-center items-center bg-white bg-fixed md:mx-36 md:py-20 md:px-36 p-10">
         <h3
           className="text-3xl

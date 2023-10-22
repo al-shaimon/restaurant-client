@@ -31,30 +31,74 @@ const Order = () => {
         title="Order Food"
         subTitle="Would you like to try a dish?"
       ></Cover>
-      <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-        <TabList className="text-center font-semibold mt-16 mb-6 uppercase">
-          <Tab>Salad</Tab>
-          <Tab>Pizza</Tab>
-          <Tab>Soup</Tab>
-          <Tab>Dessert</Tab>
-          <Tab>Drinks</Tab>
-        </TabList>
-        <TabPanel>
-          <OrderTab items={salad}></OrderTab>
-        </TabPanel>
-        <TabPanel>
-          <OrderTab items={pizza}></OrderTab>
-        </TabPanel>
-        <TabPanel>
-          <OrderTab items={soup}></OrderTab>
-        </TabPanel>
-        <TabPanel>
-          <OrderTab items={desserts}></OrderTab>
-        </TabPanel>
-        <TabPanel>
-          <OrderTab items={drinks}></OrderTab>
-        </TabPanel>
-      </Tabs>
+      {/* <div className="max-w-screen-xl mx-auto">
+        <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+          <TabList className="text-center font-semibold mt-16 mb-6 uppercase">
+            <Tab>Salad</Tab>
+            <Tab>Pizza</Tab>
+            <Tab>Soup</Tab>
+            <Tab>Dessert</Tab>
+            <Tab>Drinks</Tab>
+          </TabList>
+          <TabPanel>
+            <OrderTab items={salad}></OrderTab>
+          </TabPanel>
+          <TabPanel>
+            <OrderTab items={pizza}></OrderTab>
+          </TabPanel>
+          <TabPanel>
+            <OrderTab items={soup}></OrderTab>
+          </TabPanel>
+          <TabPanel>
+            <OrderTab items={desserts}></OrderTab>
+          </TabPanel>
+          <TabPanel>
+            <OrderTab items={drinks}></OrderTab>
+          </TabPanel>
+        </Tabs>
+      </div> */}
+      <div className="max-w-screen-xl mx-auto">
+        <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+          <TabList className="text-center font-semibold mt-16 mb-6 uppercase">
+            {categories.map((item, index) => (
+              <Tab
+                key={index}
+                style={
+                  tabIndex === index
+                    ? {
+                        color: '#BB8506',
+                        borderBottom: '2px solid #BB8506 ',
+                        borderLeft: 'none',
+                        borderRight: 'none',
+                        borderTop: 'None',
+                        background: 'none',
+                      }
+                    : {
+                        color: 'black',
+                      }
+                }
+              >
+                {item}
+              </Tab>
+            ))}
+          </TabList>
+          <TabPanel>
+            <OrderTab items={salad}></OrderTab>
+          </TabPanel>
+          <TabPanel>
+            <OrderTab items={pizza}></OrderTab>
+          </TabPanel>
+          <TabPanel>
+            <OrderTab items={soup}></OrderTab>
+          </TabPanel>
+          <TabPanel>
+            <OrderTab items={desserts}></OrderTab>
+          </TabPanel>
+          <TabPanel>
+            <OrderTab items={drinks}></OrderTab>
+          </TabPanel>
+        </Tabs>
+      </div>
     </div>
   );
 };
