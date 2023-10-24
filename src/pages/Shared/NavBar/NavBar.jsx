@@ -65,7 +65,7 @@ const NavBar = () => {
   return (
     <nav
       id="nav-bar"
-      className="navbar fixed z-10 bg-[#15151580] text-white max-w-screen-2xl py-0 pr-5"
+      className="navbar fixed z-10 bg-[#15151580] text-white max-w-screen-2xl py-0 pr-3"
     >
       <div className="navbar">
         {/* <div className="navbar fixed z-10 bg-opacity-30 bg-black text-white max-w-screen-xl"> */}

@@ -3,6 +3,7 @@ import Cover from '../Shared/Cover/Cover';
 import contactImg from '../../assets/contact/banner.jpg';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import { FaClock, FaLocationDot, FaPhoneVolume } from 'react-icons/fa6';
+import { FaTelegramPlane } from 'react-icons/fa';
 import { useForm } from 'react-hook-form';
 import ReCAPTCHA from 'react-google-recaptcha';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
@@ -158,14 +159,17 @@ const ContactUs = () => {
             sitekey={import.meta.env.VITE_reCAPTCHA_Site_Key}
             onChange={(val) => setCapVal(val)}
           />
-          <label className="inline-flex items-center justify-center">
-            <input
+          <div className="flex items-center justify-center">
+            <button
               disabled={!capVal}
-              type="submit"
-              value="Send Message"
-              className="text-white btn bg-gradient-to-r from-[#835D23] to-[#B58130] text-center w-1/2"
-            />
-          </label>
+              className="flex items-center justify-center w-fit text-center bg-gradient-to-r from-[#835D23] to-[#B58130] normal-case"
+            >
+              Send Message
+              <span className="pl-1 text-base">
+                <FaTelegramPlane></FaTelegramPlane>
+              </span>
+            </button>
+          </div>
         </form>
       </section>
     </>

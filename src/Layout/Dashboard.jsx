@@ -26,7 +26,7 @@ const Dashboard = () => {
   const [isAdmin] = useAdmin();
 
   return (
-    <div className="drawer lg:drawer-open font-inter text-black -mt-4">
+    <div className="drawer lg:drawer-open font-inter text-black">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
         {/* Page content here */}
@@ -53,7 +53,7 @@ const Dashboard = () => {
           </svg>
         </label>
       </div>
-      <div className="drawer-side">
+      <div className="drawer-side -mt-4">
         <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
         <ul className="menu p-4 md:w-80 min-h-full font-cinzel font-bold uppercase bg-[#D1A054] text-black">
           {/* Sidebar content here */}
