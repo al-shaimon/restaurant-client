@@ -69,7 +69,7 @@ const Login = () => {
               <img className="" src={logo} alt="login" />
             </div>
             <div className="flex-1 w-full">
-              <form className="" onSubmit={handleLogin}>
+              <form onSubmit={handleLogin}>
                 <h4 className="text-center text-black font-bold text-2xl">Login</h4>
                 <div>
                   <label className="label">Email</label>
@@ -108,12 +108,15 @@ const Login = () => {
                     value="Login"
                   />
                 </div>
-                <p>
+                <p className="text-center text-[#D1A054]">
                   <small>
-                    New Here? <Link to="/signUp">Create an Account</Link>
+                    New Here?{' '}
+                    <Link to="/signUp">
+                      <span className="font-bold">Create an Account</span>
+                    </Link>
                   </small>
                 </p>
-                <div className="h-1">
+                <div className="h-1 pb-10">
                   <SocialLogin></SocialLogin>
                 </div>
               </form>
