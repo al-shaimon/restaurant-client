@@ -72,7 +72,7 @@ const SignUp = () => {
             <div className="flex-1">
               <img className="" src={logo} alt="sign up" />
             </div>
-            <div className="flex-1 w-full">
+            <div className="flex-1 pl-24">
               <form onSubmit={handleSubmit(onSubmit)}>
                 <h4 className="text-center text-black font-bold text-2xl">Sign Up</h4>
                 <div className="form-control">

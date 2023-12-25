@@ -68,7 +68,7 @@ const Login = () => {
             <div className="flex-1">
               <img className="" src={logo} alt="login" />
             </div>
-            <div className="flex-1 w-full">
+            <div className="flex-1 pr-24">
               <form onSubmit={handleLogin}>
                 <h4 className="text-center text-black font-bold text-2xl">Login</h4>
                 <div>
